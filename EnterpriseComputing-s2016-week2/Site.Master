@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseWeek2.master.cs" Inherits="EnterpriseComputing_s2016_week2.EnterpriseWeek2" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="EnterpriseComputing_s2016_week2.EnterpriseWeek2" %>
 
 <!DOCTYPE html>
 
@@ -15,7 +15,9 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <nav class="navbar navbar-inverse">
+    
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -31,18 +33,17 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="Default.aspx"><i class="fa fa-home fa-lg"></i>Home</a></li>
-                    <li><a href="Default.aspx"><i class="fa fa-home fa-lg"></i>Home</a></li>
-                    <li><a href="Default.aspx"><i class="fa fa-home fa-lg"></i>Home</a></li>
-                    <li><a href="Default.aspx"><i class="fa fa-home fa-lg"></i>Home</a></li>
+                    <li id="Home" runat="server"><a href="Default.aspx"><i class="fa fa-home fa-lg"></i>Home</a></li>
+                    <li id="Products" runat="server"><a href="Products.aspx"><i class="fa fa-th fa-lg"></i>Products</a></li>
+                    <li id="Services" runat="server" ><a href="Services.aspx"><i class="fa fa-gear fa-lg"></i>Services</a></li>
+                    <li id="About" runat="server" ><a href="About.aspx"><i class="fa fa-info fa-lg"></i>About Us</a></li>
+                    <li id="Contact" runat="server" ><a href="Contact.aspx"><i class="fa fa-phone fa-lg"></i>Contact Us</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <form id="form1" runat="server">
-
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
